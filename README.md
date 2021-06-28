@@ -1,7 +1,7 @@
 # intelite-mqtt
 
 ## What it is
-Service/Library that subscribes to MQTT topic for messages of format with options specific for IR controlled lamps Maxus Intelite. 
+Service/Library that consumes MQTT of certain format and produces messages that can be used to control Maxus Intelite lamps. 
 Should work with lamp models SMT005, SMT006.
 
 ## Links
