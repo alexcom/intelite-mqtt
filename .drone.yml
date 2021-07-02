@@ -19,7 +19,7 @@ steps:
       - name: docker_socket
         path: /var/run/docker.sock
     when:
-      branch: [master]
+      branch: [main]
 
 
 volumes:
