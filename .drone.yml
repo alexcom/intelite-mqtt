@@ -11,10 +11,10 @@ steps:
   - name: Build Docker Image
     image: library/docker
     commands:
-      - docker build -t intellite-mqtt:latest .
-      - docker stop intellite-mqtt || true
-      - docker container rm intellite-mqtt || true
-      - docker run -d -v /volume1/docker/intellite-mqtt:/data --restart=always --name intellite-mqtt intellite-mqtt:latest
+      - docker build -t intelite-mqtt:latest .
+      - docker stop intelite-mqtt || true
+      - docker container rm intelite-mqtt || true
+      - docker run -d -v /volume1/docker/intelite-mqtt:/data --restart=always --name intelite-mqtt intelite-mqtt:latest
     volumes:
       - name: docker_socket
         path: /var/run/docker.sock
