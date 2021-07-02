@@ -1,4 +1,5 @@
 # intelite-mqtt
+[![Build Status](https://drone.esc.pp.ua/api/badges/alexcom/intelite-mqtt/status.svg)](https://drone.esc.pp.ua/alexcom/intelite-mqtt)
 
 ## What it is
 
