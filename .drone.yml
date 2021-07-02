@@ -1,0 +1,28 @@
+kind: pipeline
+name: default
+type: docker
+steps:
+  - name: Build
+    image: golang
+    commands:
+      - go vet ./...
+      - /bin/sh build_x86_64.sh
+
+  - name: Build Docker Image
+    image: library/docker
+    commands:
+      - docker build -t intellite-mqtt:latest .
+      - docker stop intellite-mqtt || true
+      - docker container rm intellite-mqtt || true
+#      - docker run -d -v /volume1/docker/intellite-mqtt:/data --restart=always --name intellite-mqtt intellite-mqtt:latest
+    volumes:
+      - name: docker_socket
+        path: /var/run/docker.sock
+    when:
+      branch: [master]
+
+
+volumes:
+  - name: docker_socket
+    host:
+      path: /var/run/docker.sock
