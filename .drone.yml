@@ -14,7 +14,7 @@ steps:
       - docker build -t intelite-mqtt:latest .
       - docker stop intelite-mqtt || true
       - docker container rm intelite-mqtt || true
-      - docker run -d -v /volume1/docker/intelite-mqtt:/data --restart=always --name intelite-mqtt intelite-mqtt:latest
+      - docker run -d -v /volume1/public/NAS/intelite-mqtt:/data --restart=always --name intelite-mqtt intelite-mqtt:latest
     volumes:
       - name: docker_socket
         path: /var/run/docker.sock

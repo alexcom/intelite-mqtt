@@ -1,0 +1,5 @@
+topic: intelite/bedroom
+broker_url: tcp://10.0.1.41:1883
+username: admin
+password: password
+client_id: intelite-mqtt
