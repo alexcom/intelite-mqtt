@@ -8,6 +8,11 @@ messages of certain own format and produces messages that Tasmota IR can interpr
 models SMT005, SMT006. Base implementation written by [AlexNk](https://github.com/AlexNk) and (allegedly) tested against SMT006. In my turn I
 ported it to Go and still testing against SMT005.
 
+## Deployment
+
+1. Building and running binary
+2. Building and running in Docker
+
 ## Links
 
 [Base implementation](https://github.com/AlexNk/intelite_smt006_remote)
